@@ -1,7 +1,7 @@
 
 # Hanshow Stellar series EPD Driver example
 
-Download and install the [Telink TLSR835x SDK](http://wiki.telink-semi.cn/tools_and_sdk/2_4G_Propriatery/8359_2_4g_proprietary_sdk.zip)
+Download and install the [Telink TLSR835x IDE](http://wiki.telink-semi.cn/tools_and_sdk/Tools/IDE/Telink_IDE.zip)
 
 Open Eclipse
 
