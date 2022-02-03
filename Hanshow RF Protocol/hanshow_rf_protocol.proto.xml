@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<protocol>
+   <decodings>
+      <decoding>'Non Return To Zero (NRZ)', </decoding>
+      <decoding>'Non Return To Zero + Invert', 'Invert', </decoding>
+      <decoding>'Manchester I', 'Edge Trigger', </decoding>
+      <decoding>'Manchester II', 'Edge Trigger', 'Invert', </decoding>
+      <decoding>'Differential Manchester', 'Edge Trigger', 'Differential Encoding', </decoding>
+   </decodings>
+   <participants>
+      <participant address_hex="" color_index="1" id="e79ed6eb-2eff-48aa-bc5e-6e13456f0fab" name="idustybee" relative_rssi="0" shortname="D" simulate="0"/>
+   </participants>
+   <message_types>
+      <message_type assigned_by_logic_analyzer="0" assigned_by_ruleset="0" id="793fa0ac-1ec0-480f-8819-c4aacac538a3" name="NORMAL_HEARTBEAT">
+         <label apply_decoding="True" auto_created="False" color_index="0" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="40" fuzz_me="2" fuzz_values="" name="preamble" show="2" start="0"/>
+         <label apply_decoding="True" auto_created="False" color_index="1" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="72" fuzz_me="2" fuzz_values="" name="sync_word" show="2" start="40"/>
+         <label apply_decoding="True" auto_created="False" color_index="3" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="80" fuzz_me="2" fuzz_values="" name="ctrl" show="2" start="72"/>
+         <label apply_decoding="True" auto_created="False" color_index="4" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="104" fuzz_me="2" fuzz_values="" name="wakeup_id" show="2" start="80"/>
+         <label apply_decoding="True" auto_created="False" color_index="2" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="136" fuzz_me="2" fuzz_values="" name="esl_id" show="2" start="104"/>
+         <label apply_decoding="True" auto_created="False" color_index="5" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="144" fuzz_me="2" fuzz_values="" name="wakeup_channel" show="2" start="136"/>
+         <label apply_decoding="True" auto_created="False" color_index="6" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="152" fuzz_me="2" fuzz_values="" name="group_wakeup_channel" show="2" start="144"/>
+         <label apply_decoding="True" auto_created="False" color_index="7" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="160" fuzz_me="2" fuzz_values="" name="data_channel" show="2" start="152"/>
+         <label apply_decoding="True" auto_created="False" color_index="8" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="168" fuzz_me="2" fuzz_values="" name="netmask" show="2" start="160"/>
+         <label apply_decoding="True" auto_created="False" color_index="9" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="176" fuzz_me="2" fuzz_values="" name="esl_info" show="2" start="168"/>
+         <label apply_decoding="True" auto_created="False" color_index="10" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="208" fuzz_me="2" fuzz_values="" name="screen_id" show="2" start="176"/>
+         <label apply_decoding="True" auto_created="False" color_index="11" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="216" fuzz_me="2" fuzz_values="" name="display_temperature" show="2" start="208"/>
+         <label apply_decoding="True" auto_created="False" color_index="12" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="224" fuzz_me="2" fuzz_values="" name="rom_version" show="2" start="216"/>
+         <label apply_decoding="True" auto_created="False" color_index="13" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="232" fuzz_me="2" fuzz_values="" name="page_map" show="2" start="224"/>
+         <label apply_decoding="True" auto_created="False" color_index="14" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="240" fuzz_me="2" fuzz_values="" name="page_crc_map" show="2" start="232"/>
+         <label apply_decoding="True" auto_created="False" color_index="15" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="256" fuzz_me="2" fuzz_values="" name="default_page_crc" show="2" start="240"/>
+         <label apply_decoding="True" auto_created="False" color_index="16" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="272" fuzz_me="2" fuzz_values="" name="crc" show="2" start="256"/>
+         <ruleset mode="0"/>
+      </message_type>
+      <message_type assigned_by_logic_analyzer="0" assigned_by_ruleset="0" id="2e1ac0ce-1beb-4e82-bfb2-e48b800bd117" name="TABLE_HEARTBEAT">
+         <label apply_decoding="True" auto_created="False" color_index="0" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="40" fuzz_me="2" fuzz_values="" name="preamble" show="2" start="0"/>
+         <label apply_decoding="True" auto_created="False" color_index="1" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="72" fuzz_me="2" fuzz_values="" name="sync_word" show="2" start="40"/>
+         <label apply_decoding="True" auto_created="False" color_index="2" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="80" fuzz_me="2" fuzz_values="" name="ctrl" show="2" start="72"/>
+         <label apply_decoding="True" auto_created="False" color_index="3" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="112" fuzz_me="2" fuzz_values="" name="product_id" show="2" start="80"/>
+         <label apply_decoding="True" auto_created="False" color_index="4" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="128" fuzz_me="2" fuzz_values="" name="screen_height" show="2" start="112"/>
+         <label apply_decoding="True" auto_created="False" color_index="5" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="144" fuzz_me="2" fuzz_values="" name="screen_width" show="2" start="128"/>
+         <label apply_decoding="True" auto_created="False" color_index="6" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="152" fuzz_me="2" fuzz_values="" name="screen_dpi" show="2" start="144"/>
+         <label apply_decoding="True" auto_created="False" color_index="7" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="160" fuzz_me="2" fuzz_values="" name="max_page" show="2" start="152"/>
+         <label apply_decoding="True" auto_created="False" color_index="8" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="176" fuzz_me="2" fuzz_values="" name="flash_size" show="2" start="160"/>
+         <label apply_decoding="True" auto_created="False" color_index="9" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="192" fuzz_me="2" fuzz_values="" name="max_package" show="2" start="176"/>
+         <label apply_decoding="True" auto_created="False" color_index="10" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="200" fuzz_me="2" fuzz_values="" name="screen_delay_time" show="2" start="192"/>
+         <label apply_decoding="True" auto_created="False" color_index="11" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="208" fuzz_me="2" fuzz_values="" name="osd_process_time" show="2" start="200"/>
+         <label apply_decoding="True" auto_created="False" color_index="12" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="224" fuzz_me="2" fuzz_values="" name="screen_size" show="2" start="208"/>
+         <label apply_decoding="True" auto_created="False" color_index="13" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="264" fuzz_me="2" fuzz_values="" name="reserve_buf" show="2" start="224"/>
+         <label apply_decoding="True" auto_created="False" color_index="14" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="280" fuzz_me="2" fuzz_values="" name="crc" show="2" start="264"/>
+         <ruleset mode="0"/>
+      </message_type>
+   </message_types>
+</protocol>
