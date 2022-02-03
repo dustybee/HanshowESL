@@ -15,4 +15,4 @@ To build, select the project in the Project Explorer and click on the Hammer ico
 
 # Hanshow RF Protocol
 
-See [Hanshow RF Protocol](/Hanshow%20RF%20Protocol/protocol.md)
+See [Hanshow RF Protocol](/Hanshow%20RF%20Protocol/readme.md)
