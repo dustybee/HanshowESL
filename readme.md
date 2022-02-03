@@ -12,3 +12,7 @@ Under General, select "Existing Projects into Workspace" and click next.
 Select the root of the project folder as the root directory and click Finish
 
 To build, select the project in the Project Explorer and click on the Hammer icon.
+
+# Hanshow RF Protocol
+
+See [Hanshow RF Protocol](/Hanshow%20RF%20Protocol/protocol.md)
