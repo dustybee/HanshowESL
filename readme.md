@@ -3,12 +3,12 @@
 
 This firmware is currently work in progress. It's for you to play with if you want. There is no guarantee of any functionality.
 
-#####Requirements: 
+#### Requirements: 
 * [Make](https://www.gnu.org/software/make/)
 * [Python](https://www.python.org/downloads/)
 * A command line
 
-#####Build
+#### Build
 
 Clone the repo
 ```
