@@ -1,4 +1,4 @@
-#include "../drivers.h"
+#include "drivers.h"
 #include "led.h"
 
 void led_init() {

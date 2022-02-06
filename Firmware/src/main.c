@@ -1,38 +1,28 @@
-#include "../drivers.h"
-#include "../SSD1680_EPD/epd.h"
-#include "../SSD1680_EPD/epd_spi.h"
-#include "led.h"
-#include "1.h"
+#include "tl_common.h"
+#include "drivers.h"
+#include "stack/ble/ble.h"
+#include "vendor/common/user_config.h"
 
-//unsigned char BW_Image[4000]; 	//Define canvas space
-//unsigned char R_Image[4000];  	//Define canvas space
+extern void app (void);
 
-int main(void)
+void irq_handler (void)
 {
-    blc_pm_select_internal_32k_crystal();
-    cpu_wakeup_init();
-    clock_init(SYS_CLK_24M_Crystal);
-
-    led_init();						//LED pins init
-    EPD_GPIO_Init();                //EPD GPIO  initialization
-    EPD_init();                     //EPD init
-
-    led(1, 500);
-    sleep_ms(50);
-    led(1, 50);
-    sleep_ms(50);
-    led(1, 50);
-
-    PIC_display(gImage_BW1, gImage_R1); // Display bitmap image
-
-    led(2, 500);
-
-    EPD_sleep();                    	//EPD_sleep, Sleep instruction is necessary, please do not delete!
-
-    while(1) {
-        led(1, 10);
-        sleep_ms(2000);
-        led(2, 10);
-        sleep_ms(2000);
-    }
+	irq_blt_sdk_handler();
 }
+
+
+int main (void)    //must run in ramcode
+{
+	blc_pm_select_internal_32k_crystal();
+	cpu_wakeup_init();
+	int deepRetWakeUp = pm_is_MCU_deepRetentionWakeup();  //MCU deep retention wakeUp
+	gpio_init( !deepRetWakeUp );  //analog resistance will keep available in deepSleep mode, so no need initialize again
+	blc_app_loadCustomizedParameters();  //load customized freq_offset cap value
+	app_init();
+    irq_enable();
+
+	while (1) {
+		app ();
+	}
+}
+
