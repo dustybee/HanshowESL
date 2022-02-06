@@ -1,17 +1,35 @@
 
-# Hanshow Stellar series EPD Driver example
+# Hanshow Stellar series Firmware
 
-Download and install the [Telink TLSR835x IDE](http://wiki.telink-semi.cn/tools_and_sdk/Tools/IDE/Telink_IDE.zip)
+This firmware is currently work in progress. It's for you to play with if you want. There is no guarantee of any functionality.
 
-Open Eclipse
+#####Requirements: 
+* [Make](https://www.gnu.org/software/make/)
+* [Python](https://www.python.org/downloads/)
+* A command line
 
-Goto File -> Import
+#####Build
 
-Under General, select "Existing Projects into Workspace" and click next.
+Clone the repo
+```
+git clone https://github.com/dustybee/HanshowESL.git
+```
 
-Select the root of the project folder as the root directory and click Finish
+Change directory to Firmware/src
+```
+cd HanshowESL/Firmware/src
+```
 
-To build, select the project in the Project Explorer and click on the Hammer icon.
+Build the project with Make
+```
+make all
+```
+
+The build bin file will be available in the `Firmware` directory.
+
+Flash the firmware to the ESL via [this handy web-based flasher](https://atc1441.github.io/ATC_TLSR_Paper_UART_Flasher.html)!
+
+---
 
 # Hanshow RF Protocol
 
