@@ -9,11 +9,11 @@
 void app (void);
 
 /**
- * @brief     App init
+ * @brief     App init normal
  * @param[in]  none.
  * @return     none.
  */
-void app_init (void);
+void user_init_normal (void);
 
 
 #endif /* APP_H_ */

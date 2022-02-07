@@ -7,6 +7,9 @@
 OBJS += \
 $(OUT_PATH)/app.o \
 $(OUT_PATH)/led.o \
+$(OUT_PATH)/app_ble.o \
+$(OUT_PATH)/app_uart.o \
+$(OUT_PATH)/app_att.o \
 $(OUT_PATH)/epd.o \
 $(OUT_PATH)/epd_spi.o \
 $(OUT_PATH)/main.o 

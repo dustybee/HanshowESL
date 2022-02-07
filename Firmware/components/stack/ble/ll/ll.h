@@ -306,7 +306,7 @@ extern u32			 blc_tlkEvent_pending;
 
 
 /******************************************************** User Interface  ************************************************************************/
-void		irq_blt_sdk_handler ();;
+void		irq_blt_sdk_handler ();
 int 		blt_sdk_main_loop(void);
 
 void 		blc_ll_initStandby_module (u8 *public_adr);
